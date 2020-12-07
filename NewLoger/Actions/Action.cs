@@ -10,16 +10,16 @@
     /// <summary>
     /// Class when we will throw exeptions and info messages.
     /// </summary>
-    public class Actions
+    public class Action
     {
-        private readonly Logger logger;
+        private readonly Loger logger;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Actions"/> class.
+        /// Initializes a new instance of the <see cref="Action"/> class.
         /// </summary>
-        public Actions()
+        public Action()
         {
-            this.logger = Logger.GetInstance();
+            this.logger = Loger.GetInstance();
         }
 
         /// <summary>

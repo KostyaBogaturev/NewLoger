@@ -1,7 +1,6 @@
-﻿namespace NewLogger
+﻿namespace NewLoger
 {
     using System;
-    using NewLoger.Actions;
     using NewLoger.Enum;
     using NewLoger.Helper;
     using NewLoger.Logger;
@@ -11,16 +10,16 @@
     /// </summary>
     public class Starter
     {
-        private readonly Actions actions;
-        private readonly Logger logger;
+        private readonly NewLoger.Actions.Action actions;
+        private readonly Loger logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Starter"/> class.
         /// </summary>
         public Starter()
         {
-            this.actions = new Actions();
-            this.logger = Logger.GetInstance();
+            this.actions = new NewLoger.Actions.Action();
+            this.logger = Loger.GetInstance();
         }
 
         /// <summary>

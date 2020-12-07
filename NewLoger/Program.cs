@@ -11,6 +11,8 @@
         /// <param name="args">standart argument.</param>
         public static void Main(string[] args)
         {
+            NewLoger.Starter starter = new NewLoger.Starter();
+            starter.Run();
         }
     }
 }

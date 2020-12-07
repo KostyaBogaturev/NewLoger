@@ -7,16 +7,16 @@
     /// <summary>
     /// Logger class.
     /// </summary>
-    public class Logger
+    public class Loger
     {
-        private static readonly Lazy<Logger> LazyLog = new Lazy<Logger>(() => new Logger());
+        private static readonly Lazy<Loger> LazyLog = new Lazy<Loger>(() => new Loger());
         private readonly FileService fileService;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Logger"/> class.
+        /// Initializes a new instance of the <see cref="Loger"/> class.
         /// Initialising file service to work with it.
         /// </summary>
-        private Logger()
+        private Loger()
         {
             this.fileService = FileService.GetInstance();
         }
@@ -25,7 +25,7 @@
         /// Det referens to legger.
         /// </summary>
         /// <returns>logger.</returns>
-        public static Logger GetInstance()
+        public static Loger GetInstance()
         {
             return LazyLog.Value;
         }

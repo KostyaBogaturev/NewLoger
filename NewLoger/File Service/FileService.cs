@@ -18,8 +18,8 @@
         private FileService()
         {
             this.DiractoryCheck();
-            this.fileName = $"{DateTime.UtcNow.ToString("hh:mm:ss dd.MM.yyyy")}.txt";
-            this.streamWriter = new StreamWriter($"{this.diractoryName}{this.fileName}");
+            this.fileName = $"{DateTime.UtcNow.ToString("hh:mm:ss dd:MM:yyyy")}.txt";
+            this.streamWriter = new StreamWriter($"{this.diractoryName}{this.fileName}", true);
             this.CheckFiles();
         }
 
@@ -43,7 +43,7 @@
 
         private void DiractoryCheck()
         {
-            if (Directory.Exists(this.diractoryName))
+            if (!Directory.Exists(this.diractoryName))
             {
                 Directory.CreateDirectory(this.diractoryName);
             }
@@ -52,7 +52,7 @@
         private void CheckFiles()
         {
             var filesPath = Directory.GetFiles(this.diractoryName, $"*.txt", SearchOption.TopDirectoryOnly);
-            if (filesPath.Length > 1)
+            if (filesPath.Length > 0)
             {
                 var files = new List<FileInfo>();
 
@@ -63,7 +63,7 @@
 
                 for (var i = 0; i < files.Count; i++)
                 {
-                    if (DateTime.UtcNow - files[i].CreationTimeUtc > TimeSpan.FromDays(2) || i >= 3)
+                    if (DateTime.UtcNow - files[i].CreationTimeUtc > TimeSpan.FromDays(2) || i >= 2)
                     {
                         File.Delete(files[i].FullName);
                     }
