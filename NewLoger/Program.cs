@@ -1,7 +1,5 @@
 ﻿namespace NewLoger
 {
-    using System;
-
     /// <summary>
     /// Class with start method.
     /// </summary>
@@ -11,9 +9,8 @@
         /// Start point of program.
         /// </summary>
         /// <param name="args">standart argument.</param>
-       public static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
