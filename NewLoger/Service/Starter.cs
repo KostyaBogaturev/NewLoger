@@ -1,4 +1,4 @@
-﻿namespace NewLoggerHomeWork
+﻿namespace NewLogger
 {
     using System;
     using NewLoger.Actions;
