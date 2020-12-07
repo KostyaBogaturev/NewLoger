@@ -1,13 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NewLoger.Enum
+﻿namespace NewLoger.Enum
 {
-    enum LogType
+    /// <summary>
+    /// Enum of loger's type.
+    /// </summary>
+    public enum LogType
     {
+        /// <summary>
+        /// Info.
+        /// </summary>
         Info,
+
+        /// <summary>
+        /// Warning.
+        /// </summary>
         Warning,
+
+        /// <summary>
+        /// Error.
+        /// </summary>
         Error,
     }
 }
