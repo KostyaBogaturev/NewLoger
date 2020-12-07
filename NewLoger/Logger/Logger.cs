@@ -14,7 +14,7 @@
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Logger"/> class.
-        /// Construcor of logger need initialize fileservice to work with him.
+        /// Initialising file service to work with it.
         /// </summary>
         private Logger()
         {
@@ -22,7 +22,7 @@
         }
 
         /// <summary>
-        /// Gets instance of logger to transfer it in plases where it will uses.
+        /// Det referens to legger.
         /// </summary>
         /// <returns>logger.</returns>
         public static Logger GetInstance()
@@ -31,7 +31,7 @@
         }
 
         /// <summary>
-        /// universal method for writing all types of messadges.
+        /// Method to log messages.
         /// </summary>
         /// <param name="type">log type..</param>
         /// <param name="message">text of message.</param>
