@@ -20,6 +20,7 @@
             this.DiractoryCheck();
             this.fileName = $"{DateTime.UtcNow.ToString("hh:mm:ss dd.MM.yyyy")}.txt";
             this.streamWriter = new StreamWriter($"{this.diractoryName}{this.fileName}");
+            this.CheckFiles();
         }
 
         /// <summary>
@@ -29,6 +30,15 @@
         public static FileService GetInstance()
         {
             return Lazy.Value;
+        }
+
+        /// <summary>
+        /// Method for input log text into file.
+        /// </summary>
+        /// <param name="log">log text.</param>
+        public void Input(string log)
+        {
+            this.streamWriter.WriteLine(log);
         }
 
         private void DiractoryCheck()
