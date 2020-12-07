@@ -1,12 +1,18 @@
-﻿using System;
-
-namespace NewLoger
+﻿namespace NewLoger
 {
-    class Program
+    /// <summary>
+    /// Class with start method.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Start point of program.
+        /// </summary>
+        /// <param name="args">standart argument.</param>
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            NewLoger.Starter starter = new NewLoger.Starter();
+            starter.Run();
         }
     }
 }
